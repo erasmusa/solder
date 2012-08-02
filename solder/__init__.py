@@ -123,7 +123,9 @@ class Solder(Mapper):
 
     def connect_routes(self):
         self.collection('users', 'user', member_prefix='/{username}', formatted=False)
-        self.connect('home', '', controller='home')
+        self.collection('home', 'home')
+        #self.connect('home', '', controller='home')
+        #self.connect('/', '', controller='home')
 
 def make_auth_middleware(wrap, global_conf, **app_conf):
     from repoze.who.config import make_middleware_with_config

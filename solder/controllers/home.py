@@ -1,4 +1,5 @@
-from solder.render import render
+from solder.render import template
 
+@template('home')
 def index():
-    return render('home', dict(title='Welcome!'))
+    return dict(title='Welcome')
